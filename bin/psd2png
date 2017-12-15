@@ -1,4 +1,10 @@
 #!/usr/bin/python2.7
+
+#simple tool to produce a png from a psd
+# because gimp has worse support for psd than python. what gives?
+
+##req##psd-tools,Pillow
+
 from psd_tools import PSDImage
 import sys
 psd = PSDImage.load(sys.argv[1])
