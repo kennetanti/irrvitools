@@ -7,17 +7,20 @@ case "$1" in
 status)
 	git fetch origin
 	git status
+	fix
 	;;
 upload)
-	git add .
-	git commit -m $2
+	git add bin irpkg README.md
+	git commit -m "$2"
 	git push
-;;
+	fix
+	;;
 grab)
 	git pull
-;;
+	fix
+	;;
+fix)
+	chmod -R +x bin irpkg
+	cd $LIVE_DIR
+	;;
 esac
-
-chmod -R +x bin
-
-cd $LIVE_DIR
