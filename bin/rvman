@@ -22,5 +22,10 @@ grab)
 fix)
 	chmod -R +x bin irpkg
 	cd $LIVE_DIR
+	exit
 	;;
+**)
+	echo "usage: rvman <command> [args]"
+	echo "commands: status, upload, grab, fix"
+	echo "note: rvman upload COMMIT_MESSAGE"
 esac
