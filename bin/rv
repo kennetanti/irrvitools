@@ -1,9 +1,15 @@
 #!/bin/bash
 LIVE_DIR=`pwd`
 cd $HOME/irrvitools
+if [ -e $HOME/irrvitools/irpkg/$1/inited ]; then
+	echo "$1 already installed"
+	cd $LIVE_DIR
+	exit
+fi
 if [ -e $HOME/irrvitools/irpkg/$1/install ]; then
 	chmod +x "$HOME/irrvitools/irpkg/$1/install"
 	bash "$HOME/irrvitools/irpkg/$1/install"
+	echo `date`>$HOME/irrvitools/irpkg/$1/inited
 fi
 
 cd $LIVE_DIR
