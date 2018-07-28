@@ -1,6 +1,9 @@
 #!/bin/bash
-
-if [ -e ~/irrvitools/irpkg/$1/install ]; then
-	chmod +x "~/irrvitools/irpkg/$1/install"
-	bash "~/irrvitools/irpkg/$1/install"
+LIVE_DIR=`pwd`
+cd $HOME/irrvitools
+if [ -e $HOME/irrvitools/irpkg/$1/install ]; then
+	chmod +x "$HOME/irrvitools/irpkg/$1/install"
+	bash "$HOME/irrvitools/irpkg/$1/install"
 fi
+
+cd $LIVE_DIR
