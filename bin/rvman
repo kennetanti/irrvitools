@@ -1,0 +1,25 @@
+#!/bin/bash
+
+LIVE_DIR=`pwd`
+
+cd ~/irrvitools
+switch $1 in
+"status")
+git fetch origin
+git status
+;;
+"upload")
+"commit")
+git add .
+git commit -m $2
+git push
+;;
+"grab")
+"pull")
+git pull
+;;
+esac
+
+chmod -R +x bin
+
+cd $LIVE_DIR
