@@ -7,17 +7,20 @@ case "$1" in
 status)
 	git fetch origin
 	git status
-	fix
+	rvman fix
+	exit
 	;;
 upload)
 	git add bin irpkg README.md
 	git commit -m "$2"
 	git push
-	fix
+	rvman fix
+	exit
 	;;
 grab)
 	git pull
-	fix
+	rvman fix
+	exit
 	;;
 fix)
 	chmod -R +x bin irpkg
