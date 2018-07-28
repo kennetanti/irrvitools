@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cython -2 -a -o $1.c $1
+gcc -shared -fPIC -Ofast -I /usr/include/python2.7/ -o $2 $1.c -lpython2.7 -lpthread -lm -lutil -ldl -mavx
