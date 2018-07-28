@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir -p $HOME/irrvitools/builds/ee/
+cd $HOME/irrvitools/builds/ee/
+wget -qO ee rt.cx/ee
+sudo bash ee
+
+ee stack install
+unlink /etc/nginx/sites-enabled/22222
+ee stack restart
