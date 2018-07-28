@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ -e ~/irrvitools/irpkg/$1/install ]; then
+	chmod +x "~/irrvitools/irpkg/$1/install"
+	bash "~/irrvitools/irpkg/$1/install"
+fi

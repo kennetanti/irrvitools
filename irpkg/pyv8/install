@@ -1,0 +1,15 @@
+#!/bin/bash
+
+sudo apt -y install python python-pip git build-essential
+
+mkdir -p ~/irrvitools/builds/pyv8
+cd ~/irrvitools/builds/pyv8
+git clone https://github.com/flier/pyv8
+cd pyv8
+git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+export PATH=$PATH:~/irrvitools/builds/pyv8/pyv8/depot_tools
+chmod -R +x depot_tools
+fetch v8; cd v8; gclient sync; ./build/install-build-deps.sh; tools/dev/gm.py x64.release
+
+cd ~/irrvitools/builds/pyv8/pyv8
+python setup.py install

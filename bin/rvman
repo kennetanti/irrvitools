@@ -3,20 +3,18 @@
 LIVE_DIR=`pwd`
 
 cd ~/irrvitools
-switch $1 in
-"status")
-git fetch origin
-git status
+case "$1" in
+status)
+	git fetch origin
+	git status
+	;;
+upload)
+	git add .
+	git commit -m $2
+	git push
 ;;
-"upload")
-"commit")
-git add .
-git commit -m $2
-git push
-;;
-"grab")
-"pull")
-git pull
+grab)
+	git pull
 ;;
 esac
 
