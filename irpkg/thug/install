@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt -y install python-ssdeep libfuzzy-dev libv8-dev libboost-all-dev
+sudo apt -y install python-ssdeep libfuzzy-dev libv8-dev libboost-all-dev graphviz
 
 pip install thug
 
