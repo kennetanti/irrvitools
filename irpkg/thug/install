@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo apt -y install python-ssdeep libfuzzy-dev libv8-dev libboost-all-dev
+#sudo apt -y install python-ssdeep libfuzzy-dev libv8-dev libboost-all-dev
 
-pip install thug
+#pip install thug
 
 #mkdir -p ~/irrvitools/builds/pyv8
 #cd ~/irrvitools/builds/pyv8
@@ -18,3 +18,4 @@ pip install thug
 #cd ~/irrvitools/builds/pyv8/pyv8
 #python setup.py build
 #sudo python setup.py install
+apt -y install libv8-dev libboost-all-dev libfuzzy-dev libgraphviz-dev python-ssdeep; pip install thug
